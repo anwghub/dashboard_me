@@ -1,25 +1,36 @@
 import "./Sidebar.css";
+import { personImgs } from "../../utils/images";
+import { navigationLinks } from "../../data/data";
 
 const Sidebar = () => {
-  return (
-    <div className={`sidebar`}>
-        <div className="user-info">
-            <div className="info-img img-fit-cover">
-                <img src={personImgs.person_two} alt="profile image"/>
+    return (
+        <div className={`sidebar`}>
+            <div className="user-info">
+                <div className="info-img img-fit-cover">
+                    <img src={personImgs.person_two} alt="profile image" />
+                </div>
+                <span className="info-name">alice-doe</span>
             </div>
-            <span className="info-name">alice-doe</span>
-        </div>
-        <nav className="navigation">
-            <ul className="nav-list">
-                {
-                    nav
-                }
-                
-            </ul>
-        </nav>
+            <nav className="navigation">
+                <ul className="nav-list">
+                    <ul className="nav-list">
+                        {
+                            navigationLinks.map((navigationLink) => (
+                                <li className="nav-item" key={navigationLink.id}>
+                                    <a href="#" className={`nav-link ${navigationLink.id === activeLinkIdx ? 'active' : null}`}>
+                                        <img src={navigationLink.image} className="nav-link-icon" alt={navigationLink.title} />
+                                        <span className="nav-link-text">{navigationLink.title}</span>
+                                    </a>
+                                </li>
+                            ))
+                        }
+                    </ul>
 
-    </div>
-  )
+                </ul>
+            </nav>
+
+        </div>
+    )
 }
 
 export default Sidebar

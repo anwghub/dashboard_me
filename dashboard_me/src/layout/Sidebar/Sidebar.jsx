@@ -1,6 +1,6 @@
 import "./Sidebar.css";
-import { personImgs } from "../../utils/images";
-import { navigationLinks } from "../../data/data";
+import { personImgs } from "../../utils/images.js";
+import { navigationLinks } from "../../data/data.js";
 
 const Sidebar = () => {
     return (
@@ -35,4 +35,3 @@ const Sidebar = () => {
 
 export default Sidebar
 
-const styles = StyleSheet.create({})

@@ -1,8 +1,15 @@
 import React from 'react'
+import Cards from '../Cards/Cards'
+import Transactions from '../Transactions/Transactions'
 
 const ContentMain = () => {
   return (
-    <div></div>
+    <div className="main-content-holder">
+      <div className="content-grid-one">
+        <Cards/>
+        <Transactions/>
+      </div>
+    </div>
   )
 }
 

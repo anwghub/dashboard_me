@@ -1,9 +1,14 @@
 import React from 'react'
 import './Content.css'
+import ContentTop from '../../components/ContentTop/ContentTop'
+import ContentMain from '../../components/ContentMain/ContentMain';
 
 const Content = () => {
   return (
-    <div>Content</div>
+    <div className="main-content">
+      <ContentTop/>
+      <ContentMain/>
+    </div>
   )
 }
 
